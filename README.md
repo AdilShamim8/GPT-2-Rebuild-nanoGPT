@@ -1,1 +1,1 @@
-# GPT-2-Rebuild-nanoGPT
+# GPT-2 Rebuild nanoGPT
