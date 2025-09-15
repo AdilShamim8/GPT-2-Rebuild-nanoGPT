@@ -157,8 +157,6 @@ To contribute:
    ```
 3. Push to your branch and open a Pull Request.
 
-For more, see [CONTRIBUTING.md](CONTRIBUTING.md) (coming soon!).
-
 ## FAQs
 
 **Q: Do I need a GPU?**  
