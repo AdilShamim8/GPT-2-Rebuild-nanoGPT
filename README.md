@@ -160,14 +160,6 @@ To contribute:
 
 For more, see [CONTRIBUTING.md](CONTRIBUTING.md) (coming soon!).
 
----
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
 ## FAQs
 
 **Q: Do I need a GPU?**  
