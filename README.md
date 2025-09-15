@@ -5,7 +5,7 @@ This repository is a friendly, beginner-accessible, step-by-step reproduction of
 
 ---
 
-## 📚 Table of Contents
+## Table of Contents
 
 - [Introduction](#introduction)
 - [Project Inspiration & Credits](#project-inspiration--credits)
