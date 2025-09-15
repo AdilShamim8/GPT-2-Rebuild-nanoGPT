@@ -192,20 +192,10 @@ A: Use [Discussions](https://github.com/AdilShamim8/GPT-2-Rebuild-nanoGPT/discus
 - [GPT-2 Paper (OpenAI)](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf)
 - [PyTorch Docs](https://pytorch.org/docs/stable/index.html)
 
----
-
-## Community
-
-- **Discussions:** [GitHub Discussions](https://github.com/AdilShamim8/GPT-2-Rebuild-nanoGPT/discussions)
-- **Chat:** [Discord (Zero To Hero)](https://discord.gg/3zy8kqD9Cp)
-- **Twitter:** [@karpathy](https://twitter.com/karpathy)
-
----
-
 ## Contact
 
 For questions or suggestions, open an [issue](https://github.com/AdilShamim8/GPT-2-Rebuild-nanoGPT/issues)  
-or contact the maintainer: [AdilShamim8](https://github.com/AdilShamim8) | adilshamim8@gmail.com
+or contact the maintainer: [Adil Shamim](https://adilshamim.me/) | adilshamim8@gmail.com
 
 ---
 
