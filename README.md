@@ -130,7 +130,7 @@ Below is a simplified diagram of the transformer language model pipeline:
 [Input Text] → [Tokenizer] → [Embedding Layer] → [Transformer Blocks] → [Output Layer] → [Generated Text]
 ```
 
-![Transformer Diagram](https://www.researchgate.net/publication/383006451/figure/fig2/AS:11431281431562194@1746800875768/NanoGPT-transformer-architecture-as-described-by-Karpathy.tif)
+[Transformer Diagram](https://www.researchgate.net/publication/383006451/figure/fig2/AS:11431281431562194@1746800875768/NanoGPT-transformer-architecture-as-described-by-Karpathy.tif)
 
 ---
 
