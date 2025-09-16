@@ -1,193 +1,101 @@
 # GPT-2 Rebuild nanoGPT
 
-Welcome to **GPT-2 Rebuild nanoGPT**!  
-This repository is a friendly, beginner-accessible, step-by-step reproduction of [@karpathy/build-nanogpt](https://github.com/karpathy/build-nanogpt), inspired by [Andrej Karpathy's YouTube lecture](https://youtu.be/l8pRSuU81PU?feature=shared). The goal is to help you understand and experiment with the core ideas behind transformer-based language models like GPT-2, with simple code, clear documentation, and community support.
-
----
-
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Project Inspiration & Credits](#project-inspiration--credits)
-- [Overview of @karpathy/build-nanogpt](#overview-of-karpathybuild-nanogpt)
-- [Key Features](#key-features)
-- [System Requirements](#system-requirements)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Visual Guide](#visual-guide)
-- [Troubleshooting](#troubleshooting)
-- [Contribution Guidelines](#contribution-guidelines)
-- [License](#license)
-- [FAQs](#faqs)
-- [Additional Resources](#additional-resources)
-- [Community](#community)
-- [Contact](#contact)
-
----
+A step-by-step implementation of nanoGPT inspired by Andrej Karpathy's Neural Networks: Zero To Hero lecture series.
 
 ## Introduction
 
-**GPT-2 Rebuild nanoGPT** is for anyone who wants to learn how large language models like GPT-2 work—by building one from scratch! This project guides you through each step, with code and explanations closely following [@karpathy/build-nanogpt](https://github.com/karpathy/build-nanogpt) and Karpathy's [YouTube lecture](https://youtu.be/l8pRSuU81PU?feature=shared).
+This repository contains my implementation of nanoGPT following Andrej Karpathy's excellent [lecture](https://youtu.be/kCc8FmEb1nY?feature=shared). The goal is to provide a clear, educational walkthrough of building a GPT-2 style language model from scratch, making the concepts accessible to beginners and enthusiasts alike.
 
-You'll see how transformers process text, how training works, and how to generate your own language model outputs. The code is kept clean and beginner-friendly, so you can follow along even if you're new to deep learning.
+By following this repository, you'll gain hands-on experience with:
+- Transformer architecture implementation
+- Training language models
+- Text generation using GPT-2 style models
+- PyTorch fundamentals in a practical context
 
----
+## Project Overview
 
-## Project Inspiration & Credits
+This project is a direct adaptation of [@karpathy/ng-video-lecture](https://github.com/karpathy/ng-video-lecture), aiming to reproduce the code created during the Neural Networks: Zero To Hero video series. The implementation focuses on clarity and educational value rather than production-ready performance.
 
-- **Original inspiration:** [@karpathy/build-nanogpt](https://github.com/karpathy/build-nanogpt) — an educational, from-scratch reproduction of GPT-2 (nanoGPT) by Andrej Karpathy.
-- **Lecture reference:** [Let's reproduce GPT-2 (124M) — YouTube Lecture](https://youtu.be/l8pRSuU81PU?feature=shared)
-- **Huge thanks** to Andrej Karpathy and the open research community for making these resources available!
+## Getting Started
 
----
+### Prerequisites
 
-## Overview of @karpathy/build-nanogpt
+- Python 3.6+
+- PyTorch 1.0+
+- NumPy
+- Additional dependencies in `requirements.txt`
 
-[@karpathy/build-nanogpt](https://github.com/karpathy/build-nanogpt) is a clean, step-by-step educational repo that builds a small GPT-2-like model from scratch using PyTorch. The repository's commit history is structured so you can follow the evolution of the model line by line. It focuses on learning and transparency, not on production readiness.
+### Installation
 
-Sample outputs from the original project:
+```bash
+# Clone the repository
+git clone https://github.com/AdilShamim8/GPT-2-Rebuild-nanoGPT.git
+cd GPT-2-Rebuild-nanoGPT
 
+# Install dependencies
+pip install -r requirements.txt
 ```
-Hello, I'm a language model, and my goal is to make English as easy and fun as possible for everyone, and to find out the different grammar rules
-...
-```
-
-After extensive training, the model generates more sophisticated outputs, showcasing the learning process.
-
----
-
-## Key Features
-
-- **Educational Focus:** Code and explanations are beginner-friendly, emphasizing clarity over complexity.
-- **Minimal Dependencies:** Runs with just Python and PyTorch.
-- **Step-by-Step Evolution:** Each part of the model is built up gradually, mirroring the approach in [@karpathy/build-nanogpt](https://github.com/karpathy/build-nanogpt).
-- **Customizable:** Train on your own text files, tweak model parameters, and experiment freely.
-- **Community-Oriented:** Open for questions, discussions, and contributions.
-
----
-
-## System Requirements
-
-- Python 3.8 or newer
-- pip (Python package manager)
-- PyTorch (see [installation guide](https://pytorch.org/get-started/locally/))
-- Works on Windows, macOS, and Linux
-- (Optional) CUDA-enabled GPU for faster training
-
-**Recommended:**  
-- At least 4GB RAM  
-- (Optional) NVIDIA GPU with 4GB+ VRAM for efficient training
-
----
-
-## Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/AdilShamim8/GPT-2-Rebuild-nanoGPT.git
-   cd GPT-2-Rebuild-nanoGPT
-   ```
-
-2. **(Recommended) Create a virtual environment**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate   # On Windows: venv\Scripts\activate
-   ```
-
-3. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
----
 
 ## Usage
 
-### 1. **Prepare your dataset**
-Place your training text (e.g., `input.txt`) in the project directory.
+### Training a Model
 
-### 2. **Train the model**
 ```bash
-python train.py --data input.txt --epochs 10 --batch_size 64
+python train.py
 ```
 
-### 3. **Generate text**
-After training, sample new text:
+### Generating Text
+
 ```bash
-python generate.py --checkpoint model_checkpoint.pt --prompt "Once upon a time"
+python generate.py
 ```
 
-### 4. **Configuration**
-- Model and training parameters can be tweaked in `config.py`.
+### Model Parameters
 
----
+You can customize various aspects of the model by adjusting parameters in the configuration files:
+- Model size (number of layers, embedding dimensions)
+- Training hyperparameters (learning rate, batch size)
+- Text generation settings (temperature, max length)
 
-## Visual Guide
+## Implementation Notes
 
-Below is a simplified diagram of the transformer language model pipeline:
+As noted in the original repository:
+
+> Sadly I did not go too much into model initialization in the video lecture, but it is quite important for good performance. The current code will train and work fine, but its convergence is slower than it could be with better initialization.
+
+This repository includes improved initialization methods to enhance training efficiency while maintaining the educational clarity of the original implementation.
+
+## Project Structure
 
 ```
-[Input Text] → [Tokenizer] → [Embedding Layer] → [Transformer Blocks] → [Output Layer] → [Generated Text]
+├── data/               # Training data
+├── models/             # Model definitions
+├── utils/              # Helper functions
+├── train.py            # Training script
+├── generate.py         # Text generation script
+├── config.py           # Configuration settings
+└── README.md           # This file
 ```
 
-[Transformer Diagram](https://www.researchgate.net/publication/383006451/figure/fig2/AS:11431281431562194@1746800875768/NanoGPT-transformer-architecture-as-described-by-Karpathy.tif)
----
+## Learning Resources
 
-## Troubleshooting
+For a deeper understanding of the concepts implemented here:
+- [Neural Networks: Zero To Hero](https://karpathy.ai/zero-to-hero.html) video lecture series
+- [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) by Jay Alammar
+- [GPT-2 Paper](https://d4mucfpksywv.cloudfront.net/better-language-models/language_models_are_unsupervised_multitask_learners.pdf) by OpenAI
 
-- **Missing modules:** Run `pip install -r requirements.txt`.
-- **CUDA errors:** If you don't have a GPU, set the device to CPU in your config.
-- **Out of memory:** Lower batch size or model size in `config.py`.
-- **Training is slow:** Use a smaller dataset or a GPU.
+## Contributing
 
----
+Contributions to improve the implementation or documentation are welcome! Please feel free to submit a pull request or open an issue.
 
-## Contribution Guidelines
+## Acknowledgments
 
-We welcome all contributions!  
-To contribute:
+This project is based on Andrej Karpathy's [ng-video-lecture](https://github.com/karpathy/ng-video-lecture) repository and his Neural Networks: Zero To Hero lecture series. All credit for the original implementation and concepts goes to him.
 
-1. Fork this repo, then create a new branch:
-   ```bash
-   git checkout -b your-feature
-   ```
-2. Make your changes and commit:
-   ```bash
-   git commit -am 'Describe your change'
-   ```
-3. Push to your branch and open a Pull Request.
+## License
 
-## FAQs
-
-**Q: Do I need a GPU?**  
-A: No, but a GPU is recommended for faster training. CPU works, just slower.
-
-**Q: Can I use my own dataset?**  
-A: Yes! Replace `input.txt` with your own text file.
-
-**Q: I'm new to deep learning, can I follow along?**  
-A: Absolutely! The code and documentation are written for beginners.
-
-**Q: Where can I ask questions or get help?**  
-A: Use [Discussions](https://github.com/AdilShamim8/GPT-2-Rebuild-nanoGPT/discussions) or [open an issue](https://github.com/AdilShamim8/GPT-2-Rebuild-nanoGPT/issues).
+This project is licensed under the MIT License - see the LICENSE file for details, following the same licensing as the original repository.
 
 ---
 
-## Additional Resources
-
-- [@karpathy/build-nanogpt](https://github.com/karpathy/build-nanogpt)
-- [YouTube Lecture](https://youtu.be/l8pRSuU81PU?feature=shared)
-- [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
-- [GPT-2 Paper (OpenAI)](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf)
-- [PyTorch Docs](https://pytorch.org/docs/stable/index.html)
-
-## Contact
-
-For questions or suggestions, open an [issue](https://github.com/AdilShamim8/GPT-2-Rebuild-nanoGPT/issues)  
-or contact the maintainer: [Adil Shamim](https://adilshamim.me/) | adilshamim8@gmail.com
-
----
-
-> **Credit:**  
-> This project is heavily inspired by [@karpathy/build-nanogpt](https://github.com/karpathy/build-nanogpt) and follows the structure and educational intent of the original.  
-> Please see [the original README](https://github.com/karpathy/build-nanogpt/blob/main/README.md) for more context, errata, and production advice.
+Created by [AdilShamim8](https://github.com/AdilShamim8) | Last updated: 2025-09-16
