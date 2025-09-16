@@ -2,11 +2,11 @@
 
 A beginner-friendly implementation of a GPT-2 style model, based on Andrej Karpathy's ["Neural Networks: Zero To Hero"](https://karpathy.ai/zero-to-hero.html) lecture series. This repository follows the nanoGPT implementation demonstrated in [this YouTube lecture](https://youtu.be/kCc8FmEb1nY?feature=shared).
 
-## 📚 Overview
+## Overview
 
 This project aims to rebuild the nanoGPT architecture from scratch, providing a clear, educational implementation of the key concepts behind transformer-based language models. Following Karpathy's approach, we start simple and incrementally build toward a functioning GPT-2 style model.
 
-## 🧠 Repository Contents
+## Repository Contents
 
 - `bigram.py`: Simple bigram language model implementation
 - `gpt.py`: Full GPT model implementation with transformer architecture
@@ -14,7 +14,7 @@ This project aims to rebuild the nanoGPT architecture from scratch, providing a 
 - `input.txt`: Sample text for training the model
 - `more.txt`: Additional text data for experimentation
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -55,7 +55,7 @@ For an interactive experience, open and run the Jupyter notebook:
 jupyter notebook gpt_dev.ipynb
 ```
 
-## 🧩 Project Structure
+## Project Structure
 
 The project follows a progressive approach to building a GPT-2 style model:
 
@@ -63,7 +63,7 @@ The project follows a progressive approach to building a GPT-2 style model:
 2. **Full GPT Implementation**: Transformer-based model with self-attention (`gpt.py`)
 3. **Development Notebook**: Interactive experimentation with model components (`gpt_dev.ipynb`)
 
-## 📋 Model Architecture
+## Model Architecture
 
 The GPT model implemented here includes:
 
@@ -74,11 +74,11 @@ The GPT model implemented here includes:
 - Layer normalization
 - Dropout for regularization
 
-## 🔍 Implementation Notes
+## Implementation Notes
 
 As noted in the original repository, model initialization is crucial for good performance. While the current implementation will train and function, convergence may be slower than optimal without proper initialization techniques.
 
-## 🛠️ Customization
+## Customization
 
 You can experiment with different hyperparameters in both `bigram.py` and `gpt.py`:
 
@@ -89,21 +89,20 @@ You can experiment with different hyperparameters in both `bigram.py` and `gpt.p
 - Learning rate
 - Context length
 
-## 📚 Learning Resources
+## Learning Resources
 
 - [Neural Networks: Zero To Hero](https://karpathy.ai/zero-to-hero.html) - The lecture series this project is based on
 - [The original nanoGPT lecture](https://youtu.be/kCc8FmEb1nY?feature=shared) - YouTube video
 - [The Illustrated Transformer](http://jalammar.github.io/illustrated-transformer/) - Visual guide to transformers
 - [GPT-2 Paper](https://d4mucfpksywv.cloudfront.net/better-language-models/language_models_are_unsupervised_multitask_learners.pdf) - Original research paper
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 This repository is inspired by and builds upon [Andrej Karpathy's nanoGPT lecture code](https://github.com/karpathy/ng-video-lecture). The implementation follows his educational approach to building transformer-based language models from scratch.
 
-## 📄 License
+##License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
-
-Created by [AdilShamim8](https://github.com/AdilShamim8) | Last updated: 2025-09-16
+| Last updated: 2025-09-16
