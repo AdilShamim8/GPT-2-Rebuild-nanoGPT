@@ -95,6 +95,7 @@ You can experiment with different hyperparameters in both `bigram.py` and `gpt.p
 - [The original nanoGPT lecture](https://youtu.be/kCc8FmEb1nY?feature=shared) - YouTube video
 - [The Illustrated Transformer](http://jalammar.github.io/illustrated-transformer/) - Visual guide to transformers
 - [GPT-2 Paper](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf) - Original research paper
+- [Attention is All You Need paper:](https://arxiv.org/abs/1706.03762) - Original research paper
 
 ## Acknowledgments
 
