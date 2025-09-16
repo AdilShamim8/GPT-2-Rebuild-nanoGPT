@@ -1,29 +1,26 @@
 # GPT-2 Rebuild nanoGPT
 
-A step-by-step implementation of nanoGPT inspired by Andrej Karpathy's Neural Networks: Zero To Hero lecture series.
+A beginner-friendly implementation of a GPT-2 style model, based on Andrej Karpathy's ["Neural Networks: Zero To Hero"](https://karpathy.ai/zero-to-hero.html) lecture series. This repository follows the nanoGPT implementation demonstrated in [this YouTube lecture](https://youtu.be/kCc8FmEb1nY?feature=shared).
 
-## Introduction
+## 📚 Overview
 
-This repository contains my implementation of nanoGPT following Andrej Karpathy's excellent [lecture](https://youtu.be/kCc8FmEb1nY?feature=shared). The goal is to provide a clear, educational walkthrough of building a GPT-2 style language model from scratch, making the concepts accessible to beginners and enthusiasts alike.
+This project aims to rebuild the nanoGPT architecture from scratch, providing a clear, educational implementation of the key concepts behind transformer-based language models. Following Karpathy's approach, we start simple and incrementally build toward a functioning GPT-2 style model.
 
-By following this repository, you'll gain hands-on experience with:
-- Transformer architecture implementation
-- Training language models
-- Text generation using GPT-2 style models
-- PyTorch fundamentals in a practical context
+## 🧠 Repository Contents
 
-## Project Overview
+- `bigram.py`: Simple bigram language model implementation
+- `gpt.py`: Full GPT model implementation with transformer architecture
+- `gpt_dev.ipynb`: Interactive notebook for development and experimentation
+- `input.txt`: Sample text for training the model
+- `more.txt`: Additional text data for experimentation
 
-This project is a direct adaptation of [@karpathy/ng-video-lecture](https://github.com/karpathy/ng-video-lecture), aiming to reproduce the code created during the Neural Networks: Zero To Hero video series. The implementation focuses on clarity and educational value rather than production-ready performance.
-
-## Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- Python 3.6+
+- Python 3.8+
 - PyTorch 1.0+
 - NumPy
-- Additional dependencies in `requirements.txt`
 
 ### Installation
 
@@ -33,68 +30,79 @@ git clone https://github.com/AdilShamim8/GPT-2-Rebuild-nanoGPT.git
 cd GPT-2-Rebuild-nanoGPT
 
 # Install dependencies
-pip install -r requirements.txt
+pip install torch numpy matplotlib
 ```
 
-## Usage
+### Usage
 
-### Training a Model
+#### Training a Bigram Model
 
 ```bash
-python train.py
+python bigram.py
 ```
 
-### Generating Text
+#### Training the GPT Model
 
 ```bash
-python generate.py
+python gpt.py
 ```
 
-### Model Parameters
+#### Interactive Development
 
-You can customize various aspects of the model by adjusting parameters in the configuration files:
-- Model size (number of layers, embedding dimensions)
-- Training hyperparameters (learning rate, batch size)
-- Text generation settings (temperature, max length)
+For an interactive experience, open and run the Jupyter notebook:
 
-## Implementation Notes
-
-As noted in the original repository:
-
-> Sadly I did not go too much into model initialization in the video lecture, but it is quite important for good performance. The current code will train and work fine, but its convergence is slower than it could be with better initialization.
-
-This repository includes improved initialization methods to enhance training efficiency while maintaining the educational clarity of the original implementation.
-
-## Project Structure
-
-```
-├── data/               # Training data
-├── models/             # Model definitions
-├── utils/              # Helper functions
-├── train.py            # Training script
-├── generate.py         # Text generation script
-├── config.py           # Configuration settings
-└── README.md           # This file
+```bash
+jupyter notebook gpt_dev.ipynb
 ```
 
-## Learning Resources
+## 🧩 Project Structure
 
-For a deeper understanding of the concepts implemented here:
-- [Neural Networks: Zero To Hero](https://karpathy.ai/zero-to-hero.html) video lecture series
-- [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) by Jay Alammar
-- [GPT-2 Paper](https://d4mucfpksywv.cloudfront.net/better-language-models/language_models_are_unsupervised_multitask_learners.pdf) by OpenAI
+The project follows a progressive approach to building a GPT-2 style model:
 
-## Contributing
+1. **Bigram Language Model**: A simple statistical model (`bigram.py`)
+2. **Full GPT Implementation**: Transformer-based model with self-attention (`gpt.py`)
+3. **Development Notebook**: Interactive experimentation with model components (`gpt_dev.ipynb`)
 
-Contributions to improve the implementation or documentation are welcome! Please feel free to submit a pull request or open an issue.
+## 📋 Model Architecture
 
-## Acknowledgments
+The GPT model implemented here includes:
 
-This project is based on Andrej Karpathy's [ng-video-lecture](https://github.com/karpathy/ng-video-lecture) repository and his Neural Networks: Zero To Hero lecture series. All credit for the original implementation and concepts goes to him.
+- Token embedding layer
+- Positional encoding
+- Multi-head self-attention
+- Feed-forward neural networks
+- Layer normalization
+- Dropout for regularization
 
-## License
+## 🔍 Implementation Notes
 
-This project is licensed under the MIT License - see the LICENSE file for details, following the same licensing as the original repository.
+As noted in the original repository, model initialization is crucial for good performance. While the current implementation will train and function, convergence may be slower than optimal without proper initialization techniques.
+
+## 🛠️ Customization
+
+You can experiment with different hyperparameters in both `bigram.py` and `gpt.py`:
+
+- Model size (n_embd)
+- Number of layers (n_layer)
+- Number of attention heads (n_head)
+- Batch size
+- Learning rate
+- Context length
+
+## 📚 Learning Resources
+
+- [Neural Networks: Zero To Hero](https://karpathy.ai/zero-to-hero.html) - The lecture series this project is based on
+- [The original nanoGPT lecture](https://youtu.be/kCc8FmEb1nY?feature=shared) - YouTube video
+- [The Illustrated Transformer](http://jalammar.github.io/illustrated-transformer/) - Visual guide to transformers
+- [GPT-2 Paper](https://d4mucfpksywv.cloudfront.net/better-language-models/language_models_are_unsupervised_multitask_learners.pdf) - Original research paper
+
+## 🙏 Acknowledgments
+
+This repository is inspired by and builds upon [Andrej Karpathy's nanoGPT lecture code](https://github.com/karpathy/ng-video-lecture). The implementation follows his educational approach to building transformer-based language models from scratch.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
 
